@@ -1,0 +1,180 @@
+% Brug denne, hvis der printes på begge sider!
+%\documentclass[a4paper,twoside]{article}
+% Brug denne, hvis der kun printes på den ene side!
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shadings}
+\usepackage[english]{babel}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{chemformula}
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{commath} %smukke d/dt
+\usepackage[normalem]{ulem}
+\subfigcapmargin = .1cm %Vi kan godt lide at kunne skelne mellem captions til to sidestående subfigures.
+\usepackage{siunitx} %Pæne units=#nemt
+\usepackage{units} %Alternative units (anden notation, samme funktionalitet) 
+% geometry-pakken bruges til f.eks. at ændre margnerne.
+% Gør ikke margnerne smallere end dette - Jakob bliver ikke glad!
+\usepackage[rmargin=3cm,tmargin=3.2cm]{geometry}
+\usepackage{lastpage} % nu kan vi referere til sideantallet
+\usepackage{physics}
+\usepackage{fancyhdr} 
+\usepackage{verbatim}%mulighed for at kommentere sektioner ud
+\usepackage{import}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{natbib}
+%\usepackage{listings}
+% Default fixed font does not support bold face
+\usepackage{listings}
+\usepackage{color}
+\usepackage[noabbrev]{cleveref}
+\usepackage{lipsum}
+\usepackage{epstopdf}
+\usepackage{ mathrsfs }
+\usepackage{xcolor,colortbl}
+
+\usepackage{textcomp}
+
+\usetikzlibrary{shapes.geometric}
+\usepackage{pdfpages}
+
+\crefname{equation}{eq.}{eqs.}
+
+\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+\AppendGraphicsExtensions{.tif}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lilyblue}{rgb}{0.56,0.7,0.85}
+\definecolor{shittygreen}{rgb}{0,0.69,0.31}
+
+\interfootnotelinepenalty=10000
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\lstset{language=python}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{F. Durhuus, M. Boisen and L. Wandall}
+\rfoot{Page \thepage \, of \pageref{LastPage}}
+
+\usepackage{float}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\bibliographystyle{plainnat}
+
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = blue %Colour of citations
+}
+\newcommand{\mat}[2][ccccccccccccccccccccccccccccccc]{\left[
+\begin{array}{#1}
+#2\\
+\end{array}
+\right]}
+%\pagestyle{fancy}
+
+\makeatother
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\supereq}[1]{\equiv}
+\newcommand{\logas}[1]{\log_{_{10}}{\left( #1 \right)}}
+\newcommand{\sins}[1]{\sin{\left( #1 \right)}}
+\newcommand{\tans}[1]{\tan{\left( #1 \right)}}
+\newcommand{\coss}[1]{\cos{\left( #1 \right)}}
+\newcommand{\sinas}[1]{\sin{\left( #1 \degr \right)}}
+\newcommand{\tanas}[1]{\tan{\left( #1 \degr\right)}}
+\newcommand{\cosas}[1]{\cos{\left( #1 \degr\right)}}
+\newcommand{\lnas}[1]{\mathrm{ln}\left( #1 \right)}
+\newcommand{\sfd}[1]{\mathrm{sfd}{\left( #1 \right)}}
+\newcommand{\gcds}[1]{\mathrm{sfd}{\left( #1 \right)}}
+\newcommand{\degr}{^{\circ}}
+\newcommand{\me}[1]{\mathrm{e}^{ #1 }}
+\newcommand{\mods}[1]{\; \mathrm{mod}\; #1}
+\newcommand{\modss}[1]{(\mathrm{mod}\; #1)}
+\newcommand{\lap}{\mathcal{\hat{L}}}
+\newcommand{\infint}{\int_{-\infty}^{\infty}}
+\newcommand{\pard}[1]{\frac{\partial}{\partial #1 }}
+\newcommand{\dpard}[1]{\frac{\partial^2}{\partial #1 ^2 }}
+\newcommand{\Lag}{\mathscr{L}}
+
+
+\usepackage{tcolorbox}
+\usepackage{booktabs,xcolor}
+\makeatletter
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{\textbf{#1}: #2}% % change "#1" to "\textbf{#1}"
+  \ifdim \wd\@tempboxa >\hsize
+    \textbf{#1}: #2\par             % change "#1" to "\textbf{#1}"
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+
+
+
+\usepackage{epstopdf}
+\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+\AppendGraphicsExtensions{.tif}
+
+\usepackage{subfiles}
+
+\usepackage{multicol, caption}
+\bibliographystyle{plainnat}
+\newcommand*{\figuretitle}[1]{%
+    {\centering%   <--------  will only affect the title because of the grouping (by the
+    \textbf{#1}%              braces before \centering and behind \medskip). If you remove
+    \par\medskip}%            these braces the whole body of a {figure} env will be centered.
+}
+
+
+
+%\usepackage{setspace}
+%\doublespacing
+
+
+
+
+
+
+
+
+
+
+
+
